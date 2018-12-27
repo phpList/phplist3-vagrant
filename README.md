@@ -12,7 +12,7 @@
 * Ansible (only if you want to use Ansible from host machine for provisioning, the current configuration uses ansible_local and Vagrant installs Ansible on the guest machine for provisioning.)
 
 ``` sh
-$ git clone https://gitlab.com/phpList/phplist3-vagrant.git
+$ git clone https://github.com/phpList/phplist3-vagrant.git
 $ vagrant up
 ```
 The first time you will bring the machine up will take some minutes as it will download the guest Operating System.
