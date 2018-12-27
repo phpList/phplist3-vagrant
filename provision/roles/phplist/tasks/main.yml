@@ -1,0 +1,21 @@
+---
+
+
+- name: 1. Download phpList from git
+  git:
+    repo: 'https://github.com/phpList/phplist3.git'
+    dest: /var/www/html/phplist
+  tags: phplist    
+
+
+- name: 2. Copy config.php 
+  copy:
+    src: files/config.php
+    dest: /var/www/html/phplist/public_html/lists/config/
+    owner: root
+    group: root
+    force: yes
+
+- name: 3. Plugins, Texts, Themes
+  become: true 
+  script: phplist-additions.sh
