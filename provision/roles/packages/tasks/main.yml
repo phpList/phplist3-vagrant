@@ -29,6 +29,7 @@
     - zip
     - unzip
     - curl
+    - php5-gd
     
 - name: 3. enabled mod_rewrite
   apache2_module: name=rewrite state=present
