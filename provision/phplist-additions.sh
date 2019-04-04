@@ -60,7 +60,7 @@ sed -i s~'//# load language files'~"\$plugins_disabled['fckphplist'] = 1;saveCon
 ## Read version of php and append to init.php
 
 cd /var/www/html/phplist/
-head -4 VERSION | grep -Eo '3.3.*' > readversion.txt
+head -4 VERSION | grep -Eo '3.4.*' > readversion.txt
 phplistversion=$( cat readversion.txt )
 
 sed -i 's/define("VERSION","")/define("VERSION","'"$phplistversion"'")/g' /var/www/html/phplist/public_html/lists/admin/init.php
