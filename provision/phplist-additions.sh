@@ -24,10 +24,8 @@ git clone https://github.com/phpList/phplist-ui-dressprow.git dressprow
 git clone https://github.com/phpList/phplist-ui-bootlist.git
 cd ../plugins
 
-#cd $BUILDDIR/phplist-$version/public_html/lists/admin/plugins
 cd /var/www/html/phplist/public_html/lists/admin/plugins
 
-#cp -R "$RELEASEPLUGINDIR"/* .
 
 mkdir tmp
 
