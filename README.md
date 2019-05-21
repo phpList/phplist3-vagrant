@@ -16,11 +16,20 @@ $ git clone https://github.com/phpList/phplist3-vagrant.git
 $ cd phplist3-vagrant
 $ vagrant up
 ```
+Your phpList installation can be reached on http://127.0.0.1:8086/lists/admin
+
+To share/sync a folder between your PC and the Virtual Machine uncomment the line 23 on Vagrantfile and set the desired path, this way you can edit files without the need to enter on the virtual machine. 
+Example:
+
+``` sh
+config.vm.synced_folder "/home/user/Documents/sharedfolder", "/var/www/phplist/installation/"
+```
+
 *Note: The first time you will bring the machine up will take some minutes as it will download the guest Operating System.*
 
-To share/sync a folder between host & guest machine uncomment the line 23 on Vagrantfile and set the desired path.
 
-#### Install phpList using Ansible
+
+### Install phpList using Ansible
 Inside the "provision" directory, can be found the playbook for installing phpList with Ansible.
 
 *Note: The phplist-additions.sh script should be copied too.*
