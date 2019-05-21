@@ -1,4 +1,5 @@
 ---
+  
 - name: 1. Install MariaDB server package
   apt: name=mysql-server state=present
 
@@ -15,10 +16,7 @@
   mysql_user: name=phplist password=phplist priv=*.*:ALL host=localhost state=present
 
 - name: 5a. Install MySQL extension for PHP
-  apt: name=php5-mysql state=present
+  apt: name=php-mysql state=present
 
 - name: 5b. Restart Apache
   service: name=apache2 state=restarted
-
-
-
