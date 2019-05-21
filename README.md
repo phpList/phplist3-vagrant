@@ -4,17 +4,22 @@
 ## Install phpList using Vagrant
 
 
-##### This will install phpList with LAMP stack on a Virtual-Box machine
+##### Install phpList on Debian 9 (stretch), alongside Apache, MariaDB & PHP-7
 
 ##### Requirements :
 * Vagrant
 * Virtual-Box
 
+##### Steps :
 ``` sh
 $ git clone https://github.com/phpList/phplist3-vagrant.git
+$ cd phplist3-vagrant
 $ vagrant up
 ```
-The first time you will bring the machine up will take some minutes as it will download the guest Operating System.
+*Note: The first time you will bring the machine up will take some minutes as it will download the guest Operating System.*
 
 To share/sync a folder between host & guest machine uncomment the line 23 on Vagrantfile and set the desired path.
 
+##### Install phpList using Ansible
+Inside the "provision" directory, can be found the playbook for installing phpList with Ansible.
+*Note: The phplist-additions.sh script should be copied too.*
