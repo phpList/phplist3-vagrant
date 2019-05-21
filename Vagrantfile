@@ -6,7 +6,7 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "debian/stretch64"
   config.vm.network "forwarded_port", guest: 80, host: 8086
 
 
@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
     ansible.verbose = true
 
   end
-  
+
   config.vm.provision "shell", privileged: false, inline: <<-EOF
   echo "Your phpList installation is finished"
   echo "By default the phpList installation can be reached at http://127.0.0.1:8086/lists/admin"
