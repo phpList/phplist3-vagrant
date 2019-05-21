@@ -20,7 +20,7 @@ $ vagrant up
 
 To share/sync a folder between host & guest machine uncomment the line 23 on Vagrantfile and set the desired path.
 
-##### Install phpList using Ansible
+#### Install phpList using Ansible
 Inside the "provision" directory, can be found the playbook for installing phpList with Ansible.
 
 *Note: The phplist-additions.sh script should be copied too.*
