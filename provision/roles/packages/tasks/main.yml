@@ -1,44 +1,48 @@
 ---
-- name: 0. apt-get update
+
+- name: 0. Update cache
   apt:
    update-cache: yes
   changed_when: 0
 
-- name: 1. install Apache
+- name: 1. Install Apache
   apt: name=apache2 state=present
 
-- name: 2. install php-packages
+- name: 2. Installing required php modules
   apt: name={{ item }} update_cache=yes state=latest
   with_items:
-    - php5
-    - libapache2-mod-php5
+    - php
+    - libapache2-mod-php
     - git
     - mcrypt
-    - php5-cli
-    - php5-curl
-    - php5-fpm
-    - php5-intl
-    - php5-json
-    - php5-mcrypt
+    - php-cli
+    - php-curl
+    - php-fpm
+    - php-intl
+    - php-json
+    - php-mcrypt
     - mailutils
     - postfix
-    - subversion
-    - libapache2-mod-svn
-    - libapache2-svn 
-    - libsvn-dev
     - zip
     - unzip
     - curl
-    - php5-gd
-    
-- name: 3. enabled mod_rewrite
+    - php-gd
+    - php-simplexml
+    - php-xml
+    - php-date
+    - php-imap
+    - php-mbstring
+    - php-gettext
+    - php-zip
+
+- name: 3. Enable mod_rewrite
   apache2_module: name=rewrite state=present
 
-- name: 3b. enabled dav
-  apache2_module: name=dav state=present
-
-- name: 3c. enabled dav_svn
-  apache2_module: name=dav_svn state=present
+# - name: 3b. enabled dav
+#   apache2_module: name=dav state=present
+#
+# - name: 3c. enabled dav_svn
+#   apache2_module: name=dav_svn state=present
 
 - name: 4. Copy Apache vhost
   copy:
@@ -48,15 +52,10 @@
     group: root
     force: yes
 
-
-- name: 5. start Apache
+- name: 5. Restart Apache
   service: name=apache2 state=restarted enabled=yes
 
-- name: 6. enable php5 mcrypt module
-  shell: php5enmod mcrypt
-  args:
-    creates: /etc/php5/cli/conf.d/20-mcrypt.ini
-
-
-
-
+# - name: 6. enable php7 mcrypt module
+#   shell: php7enmod mcrypt
+#   args:
+#     creates: /etc/php/7.0/cli/conf.d/20-mcrypt.ini
