@@ -1,16 +1,24 @@
-![N|s](https://www.phplist.org/wp-content/uploads/2014/04/logo-nodomain-black.svg)
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/phpList/phplist3-vagrant">
+    <img src="https://www.phplist.org/wp-content/uploads/2014/04/logo-nodomain-black.svg" alt="Logo" width="220" height="80">
+  </a>
+</p>
+
 
 #
 ## Install phpList using Vagrant
 
 
-##### Install phpList on Debian 9 (stretch), alongside Apache, MariaDB & PHP-7
+Install phpList on Debian 9 (stretch), alongside Apache, MariaDB & PHP-7
 
-##### Requirements :
+### Requirements :
 * Vagrant
 * Virtual-Box
 
-##### Steps :
+### Steps :
 ``` sh
 $ git clone https://github.com/phpList/phplist3-vagrant.git
 $ cd phplist3-vagrant
@@ -18,8 +26,8 @@ $ vagrant up
 ```
 Your phpList installation can be reached on http://127.0.0.1:8086/lists/admin
 
-To share/sync a folder between your PC and the Virtual Machine uncomment the line 23 on Vagrantfile and set the desired path, this way you can edit files without the need to enter on the virtual machine. 
-Example:
+*To share/sync a folder between your PC and the Virtual Machine uncomment the line 23 on Vagrantfile and set the desired path, this way you can edit files without the need to enter on the virtual machine. 
+Example:*
 
 ``` sh
 config.vm.synced_folder "/home/user/Documents/sharedfolder", "/var/www/phplist/installation/"
