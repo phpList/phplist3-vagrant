@@ -9,10 +9,10 @@
 
 
 #
-## Install phpList using Vagrant
+## Run phpList using Vagrant
 
 
-Install phpList on Debian 9 (stretch), alongside Apache, MariaDB & PHP-7
+Run phpList on Debian 9 (stretch) with Apache, Mariadb & php 7
 
 ### Requirements :
 * Vagrant
