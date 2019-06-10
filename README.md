@@ -12,7 +12,7 @@
 ## Run phpList using Vagrant
 
 
-Run phpList on Debian 9 (stretch) with Apache, Mariadb & php 7
+Run phpList on Debian 9 (stretch) with Apache, MariaDB & PHP 7
 
 ### Requirements :
 * Vagrant
